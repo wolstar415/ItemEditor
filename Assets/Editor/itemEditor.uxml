@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="height: auto; flex-grow: 1; flex-direction: row; flex-shrink: 1; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
+        <ui:VisualElement name="ItemList" style="margin-left: 5px; width: 25%; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label text="아이템리스트" display-tooltip-when-elided="true" style="font-size: 24px; flex-grow: 1; padding-top: 0; padding-bottom: 5px; -unity-text-align: middle-center; margin-top: 0;" />
+                <ui:Button text="New" display-tooltip-when-elided="true" name="NewBtn" />
+                <ui:Button text="Del" display-tooltip-when-elided="true" name="DelBtn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 1px;" />
+        <ui:ScrollView name="Infos" style="width: 75%;">
+            <ui:VisualElement name="Info" style="flex-direction: row; align-items: center;">
+                <ui:Label text="정보" display-tooltip-when-elided="true" style="font-size: 30px; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement style="flex-direction: row; justify-content: center;">
+                    <ui:VisualElement name="Icon" style="width: 100px; height: 100px; background-image: url(&apos;project://database/Assets/RPG_inventory_icons/f.PNG?fileID=2800000&amp;guid=ed1074391f139544d941ae0870937dc0&amp;type=3#f&apos;);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:TextField picking-mode="Ignore" label="이름" value="filler text" name="Name" binding-path="name" />
+            <uie:ObjectField label="아이콘" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="IconFiled" binding-path="icon" />
+            <uie:EnumField label="종류" name="TypeFiled" binding-path="itemType" />
+            <ui:Label text="설명" display-tooltip-when-elided="true" style="font-size: 12px; -unity-font-style: normal; color: rgb(210, 210, 210); padding-left: 5px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; margin-bottom: 5px; background-color: rgba(0, 0, 0, 0); -unity-text-align: upper-left;" />
+            <ui:TextField picking-mode="Ignore" multiline="true" name="ItemInfo" binding-path="info" style="margin-left: 8px; margin-right: 8px; margin-top: 5px; margin-bottom: 8px; height: 100px; white-space: normal; -unity-text-align: middle-left;" />
+            <uie:IntegerField label="가격" value="0" name="Gold" binding-path="gold" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>
